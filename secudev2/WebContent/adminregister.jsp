@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" 
+       uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -62,6 +64,8 @@
 	}
 </script>
 
+
+<c:if test = "${accesslvl == 'Admin'}">
 <form id = "formadminregister" method = "POST" action = "./InternalRegisterServlet" data-parsley-validate>
 	<label>Firstname: </label>
 	<input type = "text" name = "firstname" data-parsley-required = "true" data-parsley-maxlength="50" data-parsley-pattern="^[a-zA-Z0-9 ]*$"/>
@@ -100,5 +104,9 @@
 	<br><br>
 	<input type = "submit" value = "Submit"/>
 </form>
+</c:if>
+<c:if test = "${accesslvl == 'User'}">
+	<c:redirect url="homepage.jsp"></c:redirect>
+</c:if>
 </body>
 </html>

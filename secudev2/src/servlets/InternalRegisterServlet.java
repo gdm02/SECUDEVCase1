@@ -90,7 +90,7 @@ public class InternalRegisterServlet extends HttpServlet {
 			
 			DBManager dbm = new DBManager();
 			dbm.addAccount(newAccount);
-			
+			/*
 			HttpSession session = request.getSession();
 			session.setAttribute("fname", firstname);
 			session.setAttribute("lname", lastname);
@@ -101,7 +101,7 @@ public class InternalRegisterServlet extends HttpServlet {
 			session.setAttribute("password", password);
 			session.setAttribute("aboutme", aboutme);
 			session.setAttribute("accesslvl", access);
-			
+			*/
 			response.sendRedirect("homepage.jsp");
 			return;
 		}
