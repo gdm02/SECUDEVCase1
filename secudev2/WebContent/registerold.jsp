@@ -18,6 +18,8 @@
 			changeSalutation($('#gender').val());
 		});
 		
+		//var oldsubmit = $('#formpubregister').data('events').submit[0].handler;
+		
 		$('#formpubregister').submit(function(e) {
 			if (checkLegalAge($('#birthdate').val())){
 				return true;
@@ -91,11 +93,6 @@
 	<br> <br>
 	<textarea name ="aboutme" id = "aboutme" rows = "4" cols = "50" data-parsley-maxlength = "255"></textarea>
 	<br> <br>
-	<label>Access level: </label>	
-	<select name = "accesslvl" id = "accesslvl">
-		<option value = "User" id = "userlvl">User</option>
-		<option value = "Admin" id = "adminlvl">Admin</option>
-	</select>
 	<input type = "submit" value = "Submit"/>
 </form>
 </body>

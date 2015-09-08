@@ -67,6 +67,11 @@ public class RegisterServlet extends HttpServlet {
 				valid = false;
 		}
 		
+		else {
+			System.out.println("invalid gender");
+			valid = false;
+		}
+		
 		birthdate = request.getParameter("birthdate");
 		username = request.getParameter("username");
 		password = request.getParameter("password");
